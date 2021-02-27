@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Routes
+- GET /atm : получить список доступных банкоматов
+- PUSH /atm : создать банкомат
+- GET /atm/:id : получить данные банкомата по id
+- PUT /atm/:id : обновить данные банкомата по id
+- DELETE /atm/:id : удалить банкомат по id
+
+## supportAPI ws
+getAtmListStatus(atmList) : получить статусы банкоматов

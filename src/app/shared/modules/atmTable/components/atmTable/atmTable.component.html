@@ -1,0 +1,59 @@
+<at-loading *ngIf="isLoading$ | async"></at-loading>
+
+<div class="row" *ngIf="atmTable && atmTable.length && !(isLoading$ | async)">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Vendor</th>
+          <th scope="col">Model</th>
+          <th scope="col">Status</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td><input type="text" class="form-control" name="name" /></td>
+          <td><input type="text" class="form-control" name="address" /></td>
+          <td><input type="text" class="form-control" name="vendor" /></td>
+          <td><input type="text" class="form-control" name="model" /></td>
+          <td></td>
+          <td>
+            <button type="button" class="btn btn-light" (click)="onAddAtm()">
+              add
+            </button>
+          </td>
+        </tr>
+        <tr
+          class="table-secondary"
+          *ngFor="let atm of atmTable"
+          [classList]="[getColorClass(atm.status || 'pending')]"
+          [routerLink]="['/atm', atm.id]"
+        >
+          <th scope="row">{{ atm.id }}</th>
+          <td>{{ atm.name }}</td>
+          <td>{{ atm.address }}</td>
+          <td>{{ atm.vendor }}</td>
+          <td>{{ atm.model }}</td>
+          <td>{{ atm.status || 'pending' }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-light"
+              (click)="onRemoveAtm($event, atm.id)"
+              style="position: relative; z-index: 2"
+            >
+              remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-2"></div>
+</div>

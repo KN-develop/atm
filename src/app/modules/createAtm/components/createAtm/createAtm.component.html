@@ -1,0 +1,6 @@
+<at-atm-form
+  [initialValues]="initialValues"
+  [isSubmitting]="(isSubmitting$ | async) || false"
+  [errors]="backendErrors$ | async"
+  (atmSubmit)="onSubmit($event)"
+></at-atm-form>
