@@ -1,6 +1,6 @@
 {
-  "name": "bankomat",
-  "version": "0.0.0",
+  "name": "atm-demo",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "node ./src/server/index.js & ng serve",
