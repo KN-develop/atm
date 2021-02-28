@@ -9,8 +9,9 @@ import {
   atmTableSelector,
   isLoadingSelector,
 } from 'src/app/shared/modules/atmTable/store/selectors';
-import {deleteAtmAction} from 'src/app/modules/atm/store/actions/deleteAtm.action';
 import {AtmInterface} from 'src/app/shared/types/atm.interface';
+import {deleteAtmAction} from 'src/app/shared/modules/atm/store/actions/deleteAtm.action';
+import {createAtmAction} from 'src/app/shared/modules/atmTable/store/actions/createAtm.action';
 
 @Component({
   selector: 'at-atm-table',
@@ -65,7 +66,6 @@ export class AtmTableComponent implements OnInit {
 
   onRemoveAtm(event: MouseEvent, id: string): void {
     event.stopPropagation();
-    console.log('remove', id);
     this.store.dispatch(deleteAtmAction({id}));
   }
 
@@ -80,6 +80,7 @@ export class AtmTableComponent implements OnInit {
   }
 
   onAddAtm(): void {
-    //this.store.dispatch(addAtmAction(this.form.value));
+    this.store.dispatch(createAtmAction({atmInput: this.form.value}));
+    this.initializeForm();
   }
 }

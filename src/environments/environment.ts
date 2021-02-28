@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://my-json-server.typicode.com/KN-develop/atm-server',
-  apiAtmServiceUrl: 'https://my-json-server.typicode.com/KN-develop/atm-server'
+  apiUrl: 'http://localhost:3000/api',
+  apiAtmServiceUrl: 'http://localhost:3000/support'
 };
 
 /*

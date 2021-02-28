@@ -1,9 +1,0 @@
-<at-loading *ngIf="isLoading$ | async"></at-loading>
-
-<at-atm-form
-  *ngIf="initialValues$ | async as values"
-  [initialValues]="values"
-  [isSubmitting]="(isSubmitting$ | async) || false"
-  [errors]="backendErrors$ | async"
-  (atmSubmit)="onSubmit($event)"
-></at-atm-form>

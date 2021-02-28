@@ -11,7 +11,7 @@ export const getAtmStatusAction = createAction(
 
 export const getAtmStatusSuccessAction = createAction(
   ActionTypes.GET_ATM_STATUS_LIST_SUCCESS,
-  props<{ atmService: AtmStatusInterface[] }>()
+  props<{ statusTable: AtmStatusInterface[] }>()
 );
 
 

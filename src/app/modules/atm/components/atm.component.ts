@@ -1,11 +1,11 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {select, Store} from '@ngrx/store';
-import {getAtmAction} from 'src/app/modules/atm/store/actions/getAtm.action';
-import {ActivatedRoute} from '@angular/router';
+import {getAtmAction} from 'src/app/shared/modules/atm/store/actions/getAtm.action';
+import {ActivatedRoute, Router} from '@angular/router';
 import {AtmInterface} from 'src/app/shared/types/atm.interface';
 import {Observable, Subscription} from 'rxjs';
 import {atmSelector, errorSelector, isLoadingSelector} from 'src/app/modules/atm/store/selectors';
-import {deleteAtmAction} from 'src/app/modules/atm/store/actions/deleteAtm.action';
+import {deleteAtmAction} from 'src/app/shared/modules/atm/store/actions/deleteAtm.action';
 
 @Component({
   selector: 'at-atm',
@@ -19,7 +19,7 @@ export class AtmComponent implements OnInit, OnDestroy {
   isLoading$!: Observable<boolean>;
   error$!: Observable<string | null>;
 
-  constructor(private store: Store, private route: ActivatedRoute) {
+  constructor(private store: Store, private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -53,7 +53,8 @@ export class AtmComponent implements OnInit, OnDestroy {
     this.store.dispatch(getAtmAction({id: this.id}));
   }
 
-  deleteArticle(): void {
+  deleteAtm(): void {
     this.store.dispatch(deleteAtmAction({id: this.id}));
+    this.router.navigate(['/']);
   }
 }

@@ -19,7 +19,7 @@ export class GetAtmStatusListEffect {
     switchMap(({idList}) => {
       return this.sharedSupportService.getAtmStatusList(idList).pipe(
         map((atmStatusListResponse: GetAtmStatusListResponseInterface) => {
-          return getAtmStatusSuccessAction({atmService: atmStatusListResponse.atmService});
+          return getAtmStatusSuccessAction({statusTable: atmStatusListResponse.statusTable});
         }),
         catchError((e) => {
           return of(getAtmStatusFailureAction());

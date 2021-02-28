@@ -1,6 +1,6 @@
 <at-loading *ngIf="isLoading$ | async"></at-loading>
 
-<div class="row" *ngIf="atmTable && atmTable.length && !(isLoading$ | async)">
+<div class="row" *ngIf="atmTable && !(isLoading$ | async)">
   <div class="col-md-2"></div>
   <div class="col-md-8">
     <table class="table">
@@ -16,12 +16,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr [formGroup]="form">
           <th scope="row"></th>
-          <td><input type="text" class="form-control" name="name" /></td>
-          <td><input type="text" class="form-control" name="address" /></td>
-          <td><input type="text" class="form-control" name="vendor" /></td>
-          <td><input type="text" class="form-control" name="model" /></td>
+          <td><input type="text" class="form-control" name="name" formControlName="name" /></td>
+          <td><input type="text" class="form-control" name="address" formControlName="address" /></td>
+          <td><input type="text" class="form-control" name="vendor" formControlName="vendor" /></td>
+          <td><input type="text" class="form-control" name="model" formControlName="model" /></td>
           <td></td>
           <td>
             <button type="button" class="btn btn-light" (click)="onAddAtm()">

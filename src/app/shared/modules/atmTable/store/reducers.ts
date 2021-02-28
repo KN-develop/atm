@@ -12,6 +12,15 @@ import {
   getAtmStatusFailureAction,
   getAtmStatusSuccessAction,
 } from 'src/app/shared/modules/atmTable/store/actions/getAtmStatus.action';
+import {
+  deleteAtmAction, deleteAtmFailureAction,
+  deleteAtmSuccessAction,
+} from 'src/app/shared/modules/atm/store/actions/deleteAtm.action';
+import {
+  createAtmAction,
+  createAtmFailureAction,
+  createAtmSuccessAction
+} from 'src/app/shared/modules/atmTable/store/actions/createAtm.action';
 
 const initialState: AtmTableStateInterface = {
   isLoading: false,
@@ -59,10 +68,10 @@ const atmTableReducer = createReducer(
         isLoading: false,
       };
 
-      if (state.data && action.atmService) {
+      if (state.data && action.statusTable) {
         const newData = [...state.data];
 
-        action.atmService.forEach((statusElement) => {
+        action.statusTable.forEach((statusElement) => {
           const index = newData.findIndex((el) => el.id === statusElement.id);
 
           if (index !== -1) {
@@ -78,9 +87,51 @@ const atmTableReducer = createReducer(
       return res;
     }
   ),
-
   on(
     getAtmStatusFailureAction,
+    (state): AtmTableStateInterface => ({
+      ...state,
+      isLoading: false,
+    })
+  ),
+
+  on(
+    deleteAtmAction,
+    (state): AtmTableStateInterface => ({
+      ...state,
+    })
+  ),
+  on(
+    deleteAtmSuccessAction,
+    (state, action): AtmTableStateInterface => ({
+      ...state,
+      data: state.data ? state.data.filter(el => el.id !== action.id) : null,
+    })
+  ),
+  on(
+    deleteAtmFailureAction,
+    (state): AtmTableStateInterface => ({
+      ...state,
+    })
+  ),
+
+  on(
+    createAtmAction,
+    (state): AtmTableStateInterface => ({
+      ...state,
+      isLoading: false,
+    })
+  ),
+  on(
+    createAtmSuccessAction,
+    (state, action): AtmTableStateInterface => ({
+      ...state,
+      data: state.data ? [...state.data.slice(), action.atm] : [action.atm],
+      isLoading: false,
+    })
+  ),
+  on(
+    createAtmFailureAction,
     (state): AtmTableStateInterface => ({
       ...state,
       isLoading: false,

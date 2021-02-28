@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://conduit.productionready.io/api',
-  apiAtmServiceUrl: 'https://conduit.productionready.io/service'
+  apiUrl: 'http://localhost:3000/api',
+  apiAtmServiceUrl: 'http://localhost:3000/support'
 };

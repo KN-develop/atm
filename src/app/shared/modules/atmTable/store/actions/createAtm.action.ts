@@ -4,16 +4,16 @@ import {ActionTypes} from 'src/app/shared/modules/atmTable/store/actionTypes';
 import {AtmInterface} from 'src/app/shared/types/atm.interface';
 import {AtmInputInterface} from 'src/app/shared/types/atmInput.interface';
 
-export const createAtmStatusAction = createAction(
+export const createAtmAction = createAction(
   ActionTypes.CREATE_ATM,
   props<{atmInput: AtmInputInterface}>()
 );
 
-export const createAtmStatusSuccessAction = createAction(
+export const createAtmSuccessAction = createAction(
   ActionTypes.CREATE_ATM_SUCCESS,
   props<{atm: AtmInterface}>()
 );
 
-export const createAtmStatusFailureAction = createAction(
+export const createAtmFailureAction = createAction(
   ActionTypes.CREATE_ATM_FAILURE
 );

@@ -9,9 +9,5 @@ export enum ActionTypes {
 
   CREATE_ATM = '[Create Atm] Create Atm',
   CREATE_ATM_SUCCESS = '[Create Atm] Create Atm success',
-  CREATE_ATM_FAILURE = '[Create Atm] Create Atm failure',
-
-  DELETE_ATM = '[Delete Atm] Delete Atm',
-  DELETE_ATM_SUCCESS = '[Delete Atm] Delete Atm success',
-  DELETE_ATM_FAILURE = '[Delete Atm] Delete Atm failure',
+  CREATE_ATM_FAILURE = '[Create Atm] Create Atm failure'
 }

@@ -11,8 +11,6 @@ import {AppComponent} from './app.component';
 import {environment} from 'src/environments/environment';
 import {HomeModule} from 'src/app/modules/home/home.module';
 import {AtmModule} from 'src/app/modules/atm/atm.module';
-import {CreateAtmModule} from 'src/app/modules/createAtm/createAtm.module';
-import {EditAtmModule} from 'src/app/modules/editAtm/editAtm.module';
 
 @NgModule({
   declarations: [
@@ -30,8 +28,6 @@ import {EditAtmModule} from 'src/app/modules/editAtm/editAtm.module';
     }),
     StoreRouterConnectingModule.forRoot(),
     HomeModule,
-    EditAtmModule,
-    CreateAtmModule,
     AtmModule
   ],
   bootstrap: [AppComponent]

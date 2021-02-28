@@ -12,15 +12,19 @@ import {LoadingModule} from 'src/app/shared/modules/loading/loading.module';
 import {GetAtmStatusListEffect} from 'src/app/shared/modules/atmTable/store/effects/getAtmStatusList.effect';
 import {SupportService as SharedSupportService} from 'src/app/shared/services/support.service';
 import {AtmService as SharedAtmService} from 'src/app/shared/services/atm.service';
+import {ReactiveFormsModule} from '@angular/forms';
+import {CreateAtmEffect} from 'src/app/shared/modules/atmTable/store/effects/createAtm.effect';
+import {DeleteAtmEffect} from 'src/app/shared/modules/atm/store/effects/deleteAtm.effect';
 
 @NgModule({
   imports: [
     CommonModule,
-    EffectsModule.forFeature([GetAtmTableEffect, GetAtmStatusListEffect]),
+    EffectsModule.forFeature([GetAtmTableEffect, GetAtmStatusListEffect, CreateAtmEffect, DeleteAtmEffect]),
     StoreModule.forFeature('atmTable', reducers),
     RouterModule,
     ErrorMessageModule,
-    LoadingModule
+    LoadingModule,
+    ReactiveFormsModule
   ],
   declarations: [AtmTableComponent],
   exports: [AtmTableComponent],
