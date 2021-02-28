@@ -8,7 +8,7 @@ import {AtmService as SharedAtmService} from 'src/app/shared/services/atm.servic
 import {
   deleteAtmAction,
   deleteAtmFailureAction,
-  deleteAtmSuccessAction
+  deleteAtmSuccessAction,
 } from 'src/app/shared/modules/atm/store/actions/deleteAtm.action';
 
 @Injectable()

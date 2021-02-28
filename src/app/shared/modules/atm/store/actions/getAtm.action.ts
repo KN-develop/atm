@@ -13,6 +13,4 @@ export const getAtmSuccessAction = createAction(
   props<{atm: AtmInterface}>()
 );
 
-export const getAtmFailureAction = createAction(
-  ActionTypes.GET_ATM_FAILURE
-);
+export const getAtmFailureAction = createAction(ActionTypes.GET_ATM_FAILURE);

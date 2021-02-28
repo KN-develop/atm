@@ -6,7 +6,7 @@ import {AtmTableStateInterface} from 'src/app/shared/modules/atmTable/types/atmT
 export const atmTableFeatureSelector = createFeatureSelector<
   AppStateInterface,
   AtmTableStateInterface
-  >('atmTable');
+>('atmTable');
 
 export const isLoadingSelector = createSelector(
   atmTableFeatureSelector,

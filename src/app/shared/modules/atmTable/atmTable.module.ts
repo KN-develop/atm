@@ -19,17 +19,20 @@ import {DeleteAtmEffect} from 'src/app/shared/modules/atm/store/effects/deleteAt
 @NgModule({
   imports: [
     CommonModule,
-    EffectsModule.forFeature([GetAtmTableEffect, GetAtmStatusListEffect, CreateAtmEffect, DeleteAtmEffect]),
+    EffectsModule.forFeature([
+      GetAtmTableEffect,
+      GetAtmStatusListEffect,
+      CreateAtmEffect,
+      DeleteAtmEffect,
+    ]),
     StoreModule.forFeature('atmTable', reducers),
     RouterModule,
     ErrorMessageModule,
     LoadingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   declarations: [AtmTableComponent],
   exports: [AtmTableComponent],
-  providers: [SharedAtmService, SharedSupportService]
+  providers: [SharedAtmService, SharedSupportService],
 })
-export class AtmTableModule {
-
-}
+export class AtmTableModule {}

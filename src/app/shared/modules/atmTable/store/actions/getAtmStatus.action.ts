@@ -8,12 +8,10 @@ export const getAtmStatusAction = createAction(
   props<{idList: string[]}>()
 );
 
-
 export const getAtmStatusSuccessAction = createAction(
   ActionTypes.GET_ATM_STATUS_LIST_SUCCESS,
-  props<{ statusTable: AtmStatusInterface[] }>()
+  props<{statusTable: AtmStatusInterface[]}>()
 );
-
 
 export const getAtmStatusFailureAction = createAction(
   ActionTypes.GET_ATM_STATUS_LIST_FAILURE

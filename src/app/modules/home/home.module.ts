@@ -9,15 +9,13 @@ import {UtilsService} from '../../shared/services/utils.service';
 const routes = [
   {
     path: '',
-    component: HomeComponent
-  }
+    component: HomeComponent,
+  },
 ];
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(routes), AtmTableModule],
   providers: [UtilsService],
-  declarations: [HomeComponent]
+  declarations: [HomeComponent],
 })
-export class HomeModule {
-}
-
+export class HomeModule {}

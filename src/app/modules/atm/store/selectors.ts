@@ -3,8 +3,10 @@ import {createFeatureSelector, createSelector} from '@ngrx/store';
 import {AppStateInterface} from 'src/app/shared/types/appState.interface';
 import {AtmStateInterface} from 'src/app/modules/atm/types/atmState.interface';
 
-export const atmFeatureSelector = createFeatureSelector<AppStateInterface,
-  AtmStateInterface>('atm');
+export const atmFeatureSelector = createFeatureSelector<
+  AppStateInterface,
+  AtmStateInterface
+>('atm');
 
 export const isLoadingSelector = createSelector(
   atmFeatureSelector,

@@ -2,10 +2,14 @@ import {Injectable} from '@angular/core';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
 import {catchError, map, switchMap} from 'rxjs/operators';
 import {of} from 'rxjs';
-
 import {Store} from '@ngrx/store';
+
 import {AtmService as SharedAtmService} from 'src/app/shared/services/atm.service';
-import {getAtmAction, getAtmSuccessAction, getAtmFailureAction} from 'src/app/shared/modules/atm/store/actions/getAtm.action';
+import {
+  getAtmAction,
+  getAtmSuccessAction,
+  getAtmFailureAction,
+} from 'src/app/shared/modules/atm/store/actions/getAtm.action';
 import {AtmInterface} from 'src/app/shared/types/atm.interface';
 import {getAtmStatusAction} from 'src/app/shared/modules/atmTable/store/actions/getAtmStatus.action';
 

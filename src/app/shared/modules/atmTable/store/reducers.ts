@@ -13,13 +13,14 @@ import {
   getAtmStatusSuccessAction,
 } from 'src/app/shared/modules/atmTable/store/actions/getAtmStatus.action';
 import {
-  deleteAtmAction, deleteAtmFailureAction,
+  deleteAtmAction,
+  deleteAtmFailureAction,
   deleteAtmSuccessAction,
 } from 'src/app/shared/modules/atm/store/actions/deleteAtm.action';
 import {
   createAtmAction,
   createAtmFailureAction,
-  createAtmSuccessAction
+  createAtmSuccessAction,
 } from 'src/app/shared/modules/atmTable/store/actions/createAtm.action';
 
 const initialState: AtmTableStateInterface = {
@@ -105,7 +106,7 @@ const atmTableReducer = createReducer(
     deleteAtmSuccessAction,
     (state, action): AtmTableStateInterface => ({
       ...state,
-      data: state.data ? state.data.filter(el => el.id !== action.id) : null,
+      data: state.data ? state.data.filter((el) => el.id !== action.id) : null,
     })
   ),
   on(

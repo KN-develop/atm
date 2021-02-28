@@ -13,9 +13,7 @@ import {HomeModule} from 'src/app/modules/home/home.module';
 import {AtmModule} from 'src/app/modules/atm/atm.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,9 +26,8 @@ import {AtmModule} from 'src/app/modules/atm/atm.module';
     }),
     StoreRouterConnectingModule.forRoot(),
     HomeModule,
-    AtmModule
+    AtmModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

@@ -3,5 +3,6 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'at-loading',
   templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.scss']
-})export class LoadingComponent {}
+  styleUrls: ['./loading.component.scss'],
+})
+export class LoadingComponent {}

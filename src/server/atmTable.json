@@ -2,38 +2,38 @@
  "atmTable": [
   {
    "id": 1,
-   "name": "Московский Кредитный банк 1",
-   "address": "Шоссейная ул., 34/36, Москва",
-   "vendor": "Райфайзенбанк",
-   "model": "Nautilus MX 7600 usb"
-  },
-  {
-   "id": 2,
-   "name": "Тинькофф Гурьянова 12",
-   "address": "Ленинский просп., 66, Москва",
+   "name": "МИН Банк 12",
+   "address": "Ставропольская ул., 23, корп. 1, Москва",
    "vendor": "Альфабанк",
-   "model": "Diebold Opteva 720"
+   "model": "Wincor Nixdorf ProCash 2100xe"
   },
   {
    "id": 3,
-   "name": "Райфайзенбанк Воосточная",
-   "address": "Ленинский просп., 66, Москва",
-   "vendor": "Альфабанк",
-   "model": "Diebold Opteva 720"
+   "name": "Альфабанк Дубининская",
+   "address": "Шоссейная ул., 34/36, Москва",
+   "vendor": "ПочтаБанк",
+   "model": "Wincor Nixdorf ProCash 2100xe"
   },
   {
    "id": 4,
-   "name": "Doutche Bank Академическая 1",
-   "address": "Шоссейная ул., 34/36, Москва",
+   "name": "МИН Банк 12",
+   "address": "Краснодарская ул., 57, корп. 1, Москва",
    "vendor": "Райфайзенбанк",
-   "model": "wincor nixdorf 1500"
+   "model": "diebold opteva 720"
   },
   {
-   "id": 5,
-   "name": "ВТБ 6",
-   "address": "Шоссейная ул., 34/36, Москва",
-   "vendor": "Райфайзенбанк",
-   "model": "NCR Personas 5870"
+   "name": "qwer",
+   "address": "e3wr",
+   "vendor": "ew",
+   "model": "weds",
+   "id": 6
+  },
+  {
+   "name": "23rew",
+   "address": "2ewf",
+   "vendor": "qews2w",
+   "model": "32ew",
+   "id": 7
   }
  ]
 }

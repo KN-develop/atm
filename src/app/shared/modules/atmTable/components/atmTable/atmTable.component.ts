@@ -16,7 +16,6 @@ import {createAtmAction} from 'src/app/shared/modules/atmTable/store/actions/cre
 @Component({
   selector: 'at-atm-table',
   templateUrl: './atmTable.component.html',
-  styleUrls: ['./atmTable.component.scss'],
 })
 export class AtmTableComponent implements OnInit {
   isLoading$!: Observable<boolean>;

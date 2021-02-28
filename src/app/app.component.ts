@@ -4,5 +4,4 @@ import {Component} from '@angular/core';
   selector: 'at-app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent {
-}
+export class AppComponent {}

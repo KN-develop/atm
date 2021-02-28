@@ -6,6 +6,6 @@ import {LoadingComponent} from 'src/app/shared/modules/loading/components/loadin
 @NgModule({
   imports: [CommonModule],
   declarations: [LoadingComponent],
-  exports: [LoadingComponent]
+  exports: [LoadingComponent],
 })
 export class LoadingModule {}

@@ -1,16 +1,21 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {select, Store} from '@ngrx/store';
-import {getAtmAction} from 'src/app/shared/modules/atm/store/actions/getAtm.action';
 import {ActivatedRoute, Router} from '@angular/router';
-import {AtmInterface} from 'src/app/shared/types/atm.interface';
 import {Observable, Subscription} from 'rxjs';
-import {atmSelector, errorSelector, isLoadingSelector} from 'src/app/modules/atm/store/selectors';
+
+import {getAtmAction} from 'src/app/shared/modules/atm/store/actions/getAtm.action';
+import {AtmInterface} from 'src/app/shared/types/atm.interface';
+import {
+  atmSelector,
+  errorSelector,
+  isLoadingSelector,
+} from 'src/app/modules/atm/store/selectors';
 import {deleteAtmAction} from 'src/app/shared/modules/atm/store/actions/deleteAtm.action';
 
 @Component({
   selector: 'at-atm',
   templateUrl: './atm.component.html',
-  styleUrls: ['./atm.component.scss']
+  styleUrls: ['./atm.component.scss'],
 })
 export class AtmComponent implements OnInit, OnDestroy {
   id!: string;
@@ -19,8 +24,11 @@ export class AtmComponent implements OnInit, OnDestroy {
   isLoading$!: Observable<boolean>;
   error$!: Observable<string | null>;
 
-  constructor(private store: Store, private route: ActivatedRoute, private router: Router) {
-  }
+  constructor(
+    private store: Store,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.initializeValues();

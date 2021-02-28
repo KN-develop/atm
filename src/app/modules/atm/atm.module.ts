@@ -11,12 +11,11 @@ import {GetAtmEffect} from 'src/app/modules/atm/store/effects/getAtm.effect';
 import {reducers} from 'src/app/modules/atm/store/reducers';
 import {AtmService as SharedAtmService} from 'src/app/shared/services/atm.service';
 
-
 const routes = [
   {
     path: 'atm/:id',
-    component: AtmComponent
-  }
+    component: AtmComponent,
+  },
 ];
 
 @NgModule({
@@ -29,8 +28,6 @@ const routes = [
     LoadingModule,
   ],
   declarations: [AtmComponent],
-  providers: [SharedAtmService]
+  providers: [SharedAtmService],
 })
-export class AtmModule {
-
-}
+export class AtmModule {}
